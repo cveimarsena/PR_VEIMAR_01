@@ -32,7 +32,7 @@ figcaption
   font-weight: normal
 
 .BG03
-  background-color: #B5CCAD
+  background-color: $color-secundario
 
 //- tarjeta de deslizamiento arriba abajo 
 .tarjetas-up
@@ -59,3 +59,599 @@ figcaption
     i:last-child
       display: block
  
+////////////////////////////////////////////////////////////////
+.banner-principal-decorativo
+  &-1
+    width: 120px
+    animation: rotation 8s infinite linear
+    position: absolute
+    bottom: 13%
+    right: 33%
+    z-index: -1
+  &-2
+    width: 75px
+    animation: float2 2.8s ease-in-out infinite alternate
+    position: absolute
+    bottom: 30%
+    left: 5%
+  &-3
+    width: 50px
+    animation: float1 2.8s ease-in-out infinite alternate
+    position: absolute
+    top: 20%
+    right: 45%
+  &-4
+    width: 90px
+    animation: scale 2.8s ease-in-out infinite alternate
+    position: absolute
+    top: 25%
+    right: 15%
+  &-5
+    width: 70px
+    animation: rotation 4s infinite linear
+    position: absolute
+    bottom: 15%
+    left: 15%
+    z-index: -1
+
+.banner-principal__img
+  z-index: 1
+
+@-webkit-keyframes rotation 
+  from 
+    -webkit-transform: rotate(0deg)  
+  to 
+    -webkit-transform: rotate(359deg)
+
+@keyframes float1
+  0%
+    transform: translateY(20px)
+
+  100%
+    transform: translateY(0px)
+
+@keyframes float2
+  0%
+    transform: translateX(20px)
+
+  100%
+    transform: translateX(0px)
+
+@keyframes scale
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(1.2)
+
+///// utilidades --------------------------------------
+.img65
+  width: 65px  
+.img90
+  width: 90px  
+.img250
+  width: 250px  
+.brd--rad
+  border-radius: 20px
+.hr--line
+  margin: 1rem 0
+  width: 100%
+  height: 1px  
+  background-color: #B0C0D2
+.b--rad
+  border-radius: 0px 0px 20px 20px 
+.bg--gradientBlue        
+  background: linear-gradient(0deg, rgba(215,236,252,1) 0%, rgba(239,246,252,1) 100%)
+
+.dialogo.color-primario .dialogo__words__word
+  color: #3c7792 !important
+
+
+
+///// Utildiades texto --------------------------------------
+.cstmH3
+  display: inline-block
+  padding-bottom: 7px
+  margin-bottom: 2rem
+  border-bottom: 3px solid #FF6B00
+.txt--green
+  color: #39A900 !important
+
+///// colores --------------------------------------
+.clr--gris
+  background-color: #f3f3f3
+.clr--pink
+  background-color: #FFAFB2
+.clr--pink02
+  background-color: #FFDFE0
+.clr--orange
+  background-color: #FF6B00
+.clr--gray
+  background-color: #F9F9F9
+.clr--paleBlue
+  background-color: #ECF3FB
+.clr--paleGreen
+  background-color: #DEF2F4
+.clr-paleYellow
+  background-color: #FFF8D9
+
+.anexo.cstm
+  background-color: white
+  &:hover    
+    .anexo__texto
+      p   
+        color: #2e5d97
+
+  
+
+//// Tarjetas --------------------------------------
+.crd
+  &.brd--rad
+    border-radius: 20px 
+  &.crd--grayGrad
+    padding: 2rem
+    height: 100%
+    background-color: #F6F6F6
+    border-radius: 15px    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    &:hover      
+      background: linear-gradient(180deg, rgba(25,137,226,1) 0%, rgba(10,81,139,1) 100%)
+      h4, p
+        color: white 
+      .bottomCircle
+        &::before
+          background-color: #FED981
+  &.crd--blue
+    background-color: #B1DBEA
+
+  &.crd--border
+    border: 4px solid $color-acento-botones
+    border-radius: 20px
+
+.bottomCircle
+  position: relative
+  & > *
+    position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 115px
+    height: 115px
+    background-color: #116EB9
+    border-radius: 999px
+
+.crd--avatarHorizontal
+  position: relative
+  padding-right: 12rem
+  & > *
+    position: relative
+  h5 
+    color: #7F4FC7
+  p 
+    margin-bottom: 0
+  &::before  
+    position: absolute 
+    content: ''
+    top: 0
+    right: 0
+    width: calc( 100% - 60px)
+    height: 100%
+    background-color: #C5E5FE
+
+  @media (max-width: 1000px)
+    padding-right: 2rem
+
+.crd--first, .crd--last
+  &::before 
+    background-color: #DDEDF8 !important
+
+.crd--first
+  &::before 
+    border-top-left-radius: 30px
+.crd--last
+  &::before 
+    border-bottom-left-radius: 30px
+
+.avatar
+  position: absolute
+  bottom: 0
+  right: -4rem
+  z-index: 1
+  @media (max-width: 1000px)
+    display: none
+
+///// slyder --------------------------------------
+.tarjeta--slyder  
+  height: 100%
+  background-color: white
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+.custom
+  .horizontal-scroll__wrapper
+    padding: 2rem 0.5rem 
+
+.custom
+  .horizontal-scroll
+    align-items: stretch !important
+
+
+.slyderB_bg_01
+  position: relative
+  width: 100% 
+  background-image: url("../assets/curso/temas/sliders/slyderB_gb_01.svg") 
+  background-size: cover
+  background-position: left top
+  background-repeat: no-repeat
+  border-radius: 15px
+
+.bg2
+  background-image: url(../assets/curso/temas/sliders/bg2.jpg)
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+
+.bg3
+  background-image: url(../assets/curso/temas/sliders/bg3.svg)
+  background-size: cover
+
+///// SLyder A tipo B Custom --------------------------------------
+.slyder-a__tipo-b .slyder-a__btn--atrs
+  background-color: #EEAC3A
+
+.slyder-a__tipo-b .slyder-a__btn--sigt
+  background-color: #EEAC3A
+
+.slyder-a__btn--sigt, .slyder-a__btn--atrs  
+  border: none
+
+.slyder-a__bullets__item--active
+  background-color: #8C5BE1 !important
+  border: none
+
+.slyder-a__bullets__item
+  background-color: #AFAFAF  
+
+////// Number --------------------------------------
+.number
+  position: relative
+  & > *
+    position: relative
+  &::before
+    content: attr(data-number)   
+    position: absolute
+    top: -6rem
+    left: 0rem
+    width: 100%
+    height: 100%
+    font-weight: 700
+    font-size: 120pt
+    color: #E1E2E5
+    z-index: 0
+
+///// Custom acordeon A tipo A -------------------------------------- 
+.tarjeta.acordeonA
+  background-color: #DFEAF1
+
+.acordion__accion__btn--a
+  background-color: #EEAC3A !important
+
+.acordion__activo
+  background-color: #fdf3e1 !important
+
+///////// Card hover --------------------------------------
+.crd_hover_txt
+  position: relative  
+  padding: 0 !important
+  overflow: hidden !important  
+  &:hover    
+    .crd_hover_txt--body   
+      transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 
+      transform: translateY(0)
+
+  .crd_hover_txt--body
+    position: absolute
+    padding: 1.5rem
+    bottom: 0    
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1)
+    transform: translateY(calc( 100% - 3.85rem ))
+    background-color: rgba(255, 247, 230, 1) 
+  
+  @media (min-width:1200px) and (max-width:1400px)  
+    .crd_hover_txt--body
+      p
+        font-size: 0.85em
+
+///// Linea tiempo D --------------------------------------
+.linea-tiempo-d__item__content.tarjeta.tarjeta--gris, .linea-tiempo-d__item__number.tarjeta.tarjeta--gris
+  background-color: #E6E6E6
+
+.linea-tiempo-d__item.row.linea-tiempo-d__item--selected
+  .linea-tiempo-d__item__content.tarjeta.tarjeta--gris
+    background-color: #F6F6F6
+
+///// Infografias --------------------------------------
+.l
+  transform: scaleX(-1)
+
+.imgCont
+  max-width: 700px
+
+.img-infografica__item, .img-infografica-b__item
+  width: 3.5%
+
+.img-infografica__item__dot:before, .img-infografica__item__dot:after, .img-infografica-b__item__dot:before, .img-infografica-b__item__dot:after
+  opacity: .3 !important
+
+///// modal--------------------------------------
+.custom
+  .img-infografica-b__modal
+    background: linear-gradient(90deg, rgba(32,56,81,1) 0%, rgba(60,108,155,1) 93%)
+
+////// Linea de tiempo
+
+.linea-tiempo-e__item__header 
+  width: 15%
+.linea-tiempo-e:before
+  left: 15%
+
+////// Tiras
+.tira_1, .tira_2, .tira_3, .tira_4, .tira_5
+  background-repeat: repeat
+  background-size: auto
+  background-position: start
+  min-height: 297px
+  -webkit-animation: tira 8s steps(1701) infinite
+  animation: tira 8s steps(1701) infinite
+
+
+@keyframes tira
+  0%
+    background-position: 1701px
+  100%
+    background-position: 0
+//TARJETA LIBRO
+.card-front__heading
+  //font-size: 1.5rem
+  color:white !important
+  margin-top: .25rem
+
+.inside-page__heading
+  padding-bottom: 1rem
+  width: 100%
+
+.inside-page__heading, .card-front__text-view
+  font-size: 1.3rem
+  font-weight: 800
+  margin-top: .2rem
+
+.inside-page__heading--city, .card-front__text-view--city
+  color: #ff62b2
+.inside-page__heading--ski,.card-front__text-view--ski
+  color: #2aaac1
+.inside-page__heading--beach, .card-front__text-view--beach 
+  color: #fa7f67
+
+.card-front__tp
+  color: #fafbfa
+
+.card-front__text-price
+  font-size: 1.2rem
+  margin-top: -.2rem
+
+.inside-page__text
+  color: #333
+
+  /* Icons ===========================================*/
+
+.card-front__icon 
+  fill: #fafbfa
+  font-size: 3vw
+  height: 3.25rem
+  margin-top: -.5rem
+  width: 3.25rem
+
+/* Buttons =================================================*/
+
+.inside-page__btn
+  background-color: transparent
+  border: 3px solid
+  border-radius: .5rem
+  font-size: 1.2rem
+  font-weight: 600
+  margin-top: 2rem
+  overflow: hidden
+  padding: .7rem .75rem
+  position: relative
+  text-decoration: none
+  transition: all .3s ease
+  width: 90%
+  z-index: 10
+
+.inside-page__btn::before
+  content: ""
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  transform: scaleY(0)
+  transition: all .3s ease
+  width: 100%
+  z-index: -1
+
+.inside-page__btn--city
+  border-color: #ff40a1
+  color: #ff40a1
+
+.inside-page__btn--city::before
+  background-color: #ff40a1
+
+.inside-page__btn--ski
+  border-color: #279eb2
+  color: #279eb2
+
+.inside-page__btn--ski::before
+  background-color: #279eb2
+
+.inside-page__btn--beach
+  border-color: #fa7f67
+  color: #fa7f67
+
+.inside-page__btn--beach::before
+  background-color: #fa7f67
+
+.inside-page__btn--camping
+  border-color: #00b97d
+  color: #00b97d
+
+.inside-page__btn--camping::before
+  background-color: #00b97d
+
+.inside-page__btn:hover
+  color: #fafbfa
+
+.inside-page__btn:hover::before
+  transform: scaleY(1)
+
+.card-front__tp--city,.card-front__tp--ski, .card-front__tp--beach, .card-front__tp--camping
+  img
+    max-width: 25%
+
+.card-area
+  align-items: center
+  display: flex
+  flex-wrap: nowrap
+  height: 100%
+  justify-content: space-evenly
+  padding: 1rem
+
+.card-section
+  align-items: center
+  display: flex
+  height: 100%
+  justify-content: center
+  width: 100%
+
+.card
+  background-color: rgba(0,0,0, .05)
+  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5)
+  height: 15rem
+  position: relative
+  transition: all 1s ease
+  width: 15rem
+
+.flip-card
+  height: 15rem
+  perspective: 100rem
+  position: absolute
+  right: 0
+  transition: all 1s ease
+  visibility: hidden
+  width: 15rem
+  z-index: 100
+
+.flip-card > *
+  visibility: visible
+
+.flip-card__container
+  height: 100%
+  position: absolute
+  right: 0
+  transform-origin: left
+  transition: all 1s ease
+  width: 100%
+
+.card-front, .card-back
+  backface-visibility: hidden
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+.card-front
+  background-color: #fafbfa
+  height: 15rem
+  width: 15rem
+
+
+
+.card-front__tp
+  align-items: center
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%)
+  display: flex
+  flex-direction: column
+  height: 12rem
+  justify-content: center
+  padding: .75rem
+
+.card-front__tp--city
+  background: linear-gradient(to bottom,#ff73b9,#ff40a1)
+.card-front__tp--ski
+  background: linear-gradient(to bottom,#47c2d7,#279eb2)
+.card-front__tp--beach
+  background: linear-gradient(to bottom,#fb9b88,#f86647)
+.card-front__tp--camping
+  background: linear-gradient(to bottom,#00db93,#00b97d)
+
+.card-front__bt
+  align-items: center
+  display: flex
+  justify-content: center
+
+.card-back
+  background-color: #fafbfa
+  transform: rotateY(180deg)
+
+/* Inside page */
+
+.inside-page
+  background-color: #fafbfa
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25)
+  height: 100%
+  padding: 1rem
+  position: absolute
+  right: 0
+  transition: all 1s ease
+  width: 15rem
+  z-index: 1
+
+.inside-page__container
+  align-items: center
+  display: flex
+  flex-direction: column
+  height: 100%
+  text-align: center
+  width: 100%
+
+.card:hover
+  box-shadow:inset -.1rem 0px 5rem -2.5rem rgba(199, 24, 120, 0.1)
+  width: 30rem
+
+.card:hover .flip-card__container
+  transform: rotateY(-180deg)
+
+.card:hover .inside-page
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1)
+
+/* Footer ====================================*/
+
+.footer
+  background-color: #333
+   margin-top: 3rem
+  padding: 1rem 0
+  width: 100%
+
+.footer-text
+  color: #fff
+  font-size: 1.2rem
+  text-align: center
+
+.card-1,.flip-card-1, .card-front-1,.inside-page-1
+  height: 25rem
+  width: 100%
+
+.card-front__tp-1
+  height: 20rem
